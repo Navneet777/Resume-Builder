@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{rs.Name}}</title>
+
+  <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+   <!-- Intro Section -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 psd-background">
+          <div class="psd">
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="user">
+                  <img src="{% static 'assets/img/psd/user.png' %}" alt="">
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="user-content">
+                  <h1>{{rs.Name}}</h1>
+                  <h2>{{rs.Occupation}}</h2>
+                </div>
+              </div>
+              <div class="col-lg-5 psd-top-marg">
+                <div class="head-line">
+                  <h3>PERSONAL DATA</h3>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <p><b>Name<br>Occupation<br>Phone<br>Address</b></p>
+                  </div>
+                  <div class="col-lg-6">
+                    <p>{{rs.Name}}<br>{{rs.Occupation}}<br>{{rs.Phone}}<br>{{rs.Address}}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="bottom-content">
+                <div class="col-lg-12">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="head-line">
+                        <h3>about</h3>
+                        <p>{{rs.About}}</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="head-line">
+                        <h3>FORMAL EDUCATION</h3>
+                      </div>
+                      <div class="edu-content">
+                        <div class="row">
+                          <div class="col-lg-2"><img src="{% static 'assets/img/psd/diment.png' %}" alt=""></div>
+                          <div class="col-lg-4"><h4>{{rs.Startdate}} - {{rs.Enddate}}</h4></div>
+                          <div class="col-lg-6">
+                            <h3>{{rs.UG}}</h3><h6>{{rs.Branch}}</h6>
+                            <p>{{rs.College}}<br> <span>Percentage {{rs.CGPA}} %</span></p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-2"><img src="{% static 'assets/img/psd/diment.png' %}" alt=""></div>
+                          <div class="col-lg-4"><h4>12<sup>th</sup></h4></div>
+                          <div class="col-lg-6">
+                            <h3>Higher Scecondry Certificate</h3>
+                            <p>{{rs.School2}}<br> <span>Board - {{rs.Board2}}</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="head-line">
+                        <h3>WORK EXPERIENCE</h3>
+                      </div>
+                      <div class="edu-content">
+                        <div class="row">
+                          <div class="col-lg-2"><img src="{% static 'assets/img/psd/diment.png' %}" alt=""></div>
+                          <div class="col-lg-4"><h4>{{rs.Jobstartdate2}}-{{rs.Jobenddate2}}</h4></div>
+                          <div class="col-lg-6">
+                            <h3>{{rs.Employer2}}</h3>
+                            <p>{{rs.Jobcity2}},{{rs.Jobstate2}}</p>
+                            <p>{{rs.Jobtitle2}}<br><span>{{rs.JobDescription2}}</span></p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-lg-2"><img src="{% static 'assets/img/psd/diment.png' %}" alt=""></div>
+                          <div class="col-lg-4"><h4>{{rs.Jobstartdate}}-{{rs.Jobenddate}}</h4></div>
+                          <div class="col-lg-6">
+                            <h3>{{rs.Employer}}</h3>
+                            <p>{{rs.Jobcity}},{{rs.Jobstate}}</p>
+                            <p>{{rs.Jobtitle}}<br> <span>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum </span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="head-line">
+                        <h3>TECHNICAL SKILLS</h3>
+                        <div class="skil-content">
+                          <div class="row">
+                            <div class="col-lg-6"><h4>{{rs.Skill1}}</h4></div>
+                            <div class="col-lg-6"><img src="{% static 'assets/img/psd/rate-4.png' %}" alt=""></div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-6"><h4>{{rs.Skill2}}</h4> </div>
+                            <div class="col-lg-6"><img src="{% static 'assets/img/psd/rate-2.png' %}" alt=""></div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-6"><h4>{{rs.Skill3}}</h4> </div>
+                            <div class="col-lg-6"><img src="{% static 'assets/img/psd/rate-3.png' %}" alt=""></div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-6"><h4>{{rs.Skill4}}</h4> </div>
+                            <div class="col-lg-6"><img src="{% static 'assets/img/psd/rate-1.png' %}" alt=""></div>
+                          </div>
+                        </div>
+                      </div><br>
+                      <div class="head-line">
+                        <h3>SOFT SKILLS</h3>
+                        <div class="skil-content">
+                          <div class="row">
+                            <div class="col-lg-6"><h4>{{rs.Softskill1}}</h4></div>
+                            <div class="col-lg-6"><img src="{% static 'assets/img/psd/rate-4.png' %}" alt=""></div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-6"><h4>{{rs.Softskill2}}</h4> </div>
+                            <div class="col-lg-6"><img src="{% static 'assets/img/psd/rate-2.png' %}" alt=""></div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-6"><h4>{{rs.Softskill3}}</h4> </div>
+                            <div class="col-lg-6"><img src="{% static 'assets/img/psd/rate-2.png' %}" alt=""></div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-6"><h4>{{rs.Softskill4}}</h4> </div>
+                            <div class="col-lg-6"><img src="{% static 'assets/img/psd/rate-2.png' %}" alt=""></div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="footer">
+                        <div class="row">
+                          <div class="col-lg-4"><p><img src="{% static 'assets/img/psd/twitter.png' %}" alt=""> @{{rs.Name}} </p></div>
+                          <div class="col-lg-4"><p><img src="{% static 'assets/img/psd/phone.png' %}" alt=""> +91-{{rs.Phone}} </p></div>
+                          <div class="col-lg-4"><p><img src="{% static 'assets/img/psd/reload.png' %}" alt="">{{rs.Email}}</p></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end -->
+  <div class="container">
+  <a href="{% url 'myresume' %}"><button type="button" class="btn btn-secondary btn-lg btn-block btn-center">Previous Resume Template</button></a><br>
+  <a href="{% url 'index' %}"><button type="button" class="btn btn-secondary btn-lg btn-block btn-center">Create New Resume</button></a>
+  </div>
+
+</body>
+
+</html>

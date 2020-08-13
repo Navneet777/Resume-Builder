@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% load static %}
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{rs.Name}} Resume</title>
+  <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+</head>
+<body>
+   <!-- Intro Section -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="eps">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-4 remove-padding eps-left-bg-color">
+                <div class="left-content">
+                  <img src="image/{{rs.Image}}" alt="">
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <div class="right-content">
+                  <h1>{{rs.Name}}</h1>
+                  <h2>{{rs.Occupation}}</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-4 eps-left-bg-color">
+                <div class="contact">
+                  <h2>contact me</h2>
+                  <hr>
+                  <ul>
+                    <li><img src="{% static 'assets/img/eps/location.svg' %}" alt=""> Address</li>
+                    <li class="contact-padd-align"><span>{{rs.Address}}</span></li>
+                    <li><img src="{% static 'assets/img/eps/phone.svg'%}" alt=""> Phone</li>
+                    <li class="contact-padd-align"><span>+91-{{rs.Phone}}</span></li>
+                    <li><img src="{% static 'assets/img/eps/website.svg' %}" alt="">Email</li>
+                    <li class="contact-padd-align"><span>{{rs.Email}}</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <div class="experience">
+                  <h2><img src="{% static 'assets/img/eps/edu.svg' %}" alt=""> experience</h2>
+                  <hr>
+                  <div class="company">
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <h4>{{rs.Jobstartdate}} - {{rs.Jobenddate }} <br>{{rs.Employer}}</h4><br>
+                        <h4>{{rs.Jobcity}},{{rs.Jobstate}}</h4><br>
+                      </div>
+                      <div class="col-lg-8">
+                        <h3>{{rs.Jobtitle}}</h3>
+                        <p>{{rs.JobDescription}}</p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <h4>{{rs.Jobstartdate2}} - {{rs.Jobenddate2 }} <br>{{rs.Employer2}}</h4><br>
+                        <h4>{{rs.Jobcity2}},{{rs.Jobstate2 }}</h4>
+                      </div>
+                      <div class="col-lg-8">
+                        <h3>{{rs.Jobtitle2}}</h3>
+                        <p>{{rs.JobDescription2}}</p>
+                      </div>
+                    </div>
+               </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-4 eps-left-bg-color">
+                <div class="skill">
+                  <h2>Pro skills</h2>
+                  <hr>
+                  <ul>
+                    <li>{{rs.Skill2}} <br> <img src="{% static 'assets/img/eps/skill-1.png' %}" alt=""></li>
+                    <li>{{rs.Skill1}}<br> <img src="{% static 'assets/img/eps/skill-1.png' %}"</li>
+                    <li>{{rs.Skill3}}<br> <img src="{% static 'assets/img/eps/skill-1.png' %}" alt=""></li>
+                    <li>{{rs.Skill4}}<br> <img src="{% static 'assets/img/eps/skill-1.png' %}"alt=""></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <div class="experience">
+                  <h2><img src="{% static '/assets/img/eps/education.svg' %}" alt=""> EDUCATION</h2>
+                  <div class="company">
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <h4>{{rs.Startdate}} - {{rs.Enddate}} <br>{{rs.College}}</h4>
+                      </div>
+                      <div class="col-lg-8">
+                        <h3>{{rs.UG}}</h3>
+                        <h5>{{rs.Branch}}</h5>
+                        <h6>Percentage {{rs.CGPA}} %</h5>
+                      </div>
+                    </div><br>
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <h4>12<sup>th</sup><br>{{rs.School2}}</h4>
+                      </div><br><br><br>
+                      <div class="col-lg-8">
+                        <h3>Higher Secondary Certificate</h3>
+                        <h6>Board  {{rs.Board}}</h6>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-4">
+                        <h4>10<sup>th</sup><br>{{rs.School}}</h4>
+                      </div>
+                      <div class="col-lg-8">
+                        <h3>Secondary School Certificate</h3>
+                        <h6>Board  {{rs.Board2}}</h6>
+                      </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-4 eps-left-bg-color">
+                <div class="skill">
+                  <h2>Follow me</h2>
+                  <hr>
+                  <ul>
+                    <li>{{rs.Socialname1}}<br>{{rs.Sociallink}}</li>
+                    <li>{{rs.Socialname2}}<br>{{rs.Sociallink2}}</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <div class="experience">
+                  <h2><img src="{% static '/assets/img/eps/preference.svg' %}" alt="">Soft Skills</h2>
+                <hr>
+                <div class="company">
+                    <div class="row">
+                      <div class="col-lg-8">
+                        <h4>1). {{rs.Softskill1}}</h4>
+                        <h4>2). {{rs.Softskill2}}</h4>
+                        <h4>3). {{rs.Softskill3}}</h4>
+                        <h4>4). {{rs.Softskill4}}</h4>
+                      </div>
+                    </div>
+                  </div>
+               </div>
+               <div class="experience">
+                 <h2>About Me</h2>
+               <hr>
+               <div class="company">
+                   <div class="row">
+                     <div class="col-lg-12">
+                       <p>{{rs.About}}</p>
+                     </div>
+                    </div>
+                 </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="container">
+  <a href="{% url 'myresume2' %}"><button type="button" class="btn btn-secondary btn-lg btn-block btn-center">Change Resume Template</button></a><br>
+  <a href="{% url 'index' %}"><button type="button" class="btn btn-secondary btn-lg btn-block btn-center">Create New Resume</button></a>
+  </div>
+
+  <!-- end --><br><br>
+</body>
+</html>

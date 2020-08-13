@@ -1,0 +1,259 @@
+<!doctype html>
+  <html lang="en">
+    <head>
+      {% load static %}
+    <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+      <title>Resume Builder</title>
+      </head>
+        <body>
+        <div class="container bg-l">
+          <nav class="navbar fixed-top navbar-dark bg-dark">
+          <a class="navbar-brand text-center" href="{% url 'index' %}"><h3 class="text-center text-light">Resume Builder</h3></a>
+        </nav><br><br><br>
+        <div class="card bg-dark">
+  <div class="card-header">
+  <div class="card-body text-white">
+    <form method="POST">
+      {% csrf_token %}
+    <label for=""><strong>Personal Details</strong></label>
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Full Name" name="Name" required>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Occupation" name="Occupation" required>
+      </div>
+      </div><br>
+      <input type="text" class="form-control" placeholder="Objective" name="Objective" required>
+    <br>
+      <div class="custom-file">
+    <input type="file" class="custom-file-input" id="validatedCustomFile" name="Image" required>
+    <label class="custom-file-label" for="validatedCustomFile">Upload Image</label>
+    <div class="invalid-feedback">Example invalid custom file feedback</div>
+    </div>
+    <br>
+    <label for=""><strong>Contact Details</strong></label>
+  <div class="form-row">
+  <div class="form-group col-md-6">
+<label for="inputEmail4">Email</label>
+<input type="email" class="form-control" id="inputEmail4" name="Email" required>
+</div>
+<div class="form-group col-md-6">
+<label for="inputPassword4">Phone Number</label>
+<input type="tel" class="form-control" pattern="[0-9]{10}"  title="please enter 10 digit mobile number" name="Phone" required>
+</div>
+</div>
+<div class="form-group">
+<label for="inputAddress">Address</label>
+<input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="Address" required>
+</div>
+<div class="form-row">
+<div class="form-group col-md-3">
+<label for="inputCity">City</label>
+<input type="text" class="form-control" id="inputCity" name="City" required>
+</div>
+<div class="form-group col-md-3">
+<label for="inputState">State</label>
+<input type="text" class="form-control" id="inputCity" name="State" required>
+</div>
+<div class="form-group col-md-3">
+<label for="inputZip">Zip</label>
+<input type="zip" class="form-control" id="inputZip"  pattern="[0-9]{6}" title="Six digit zip code" name="Zip" required>
+</div>
+<div class="form-group col-md-3">
+<label for="inputZip">Country</label>
+<input type="text" class="form-control" id="inputZip" name="Country" required>
+</div>
+</div>
+<div class="form-group">
+</div>
+<label for=""><strong>Education Details</strong></label>
+<div class="form-row">
+<div class="form-group col-md-7">
+<label for="inputEmail4">SSC School</label>
+<input type="text" class="form-control" id="inputEmail4" name="School" required>
+</div>
+<div class="form-group col-md-5">
+<label for="inputPassword4">SSC Board</label>
+<input type="text" class="form-control" id="inputPassword4" name="Board" required>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group col-md-7">
+<label for="inputEmail4">HSC School</label>
+<input type="text" class="form-control" id="inputEmail4" name="School2" required>
+</div>
+<div class="form-group col-md-5">
+<label for="inputPassword4">HSC Board</label>
+<input type="text" class="form-control" id="inputPassword4" name="Board2" required>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group col-md-2">
+<label for="inputCity">Under Graduation</label>
+<input type="text" class="form-control" id="inputCity" name="UG" required>
+</div>
+<div class="form-group col-md-2">
+<label for="inputCity">Branch</label>
+<input type="text" class="form-control" id="inputCity" name="Branch" required>
+</div>
+<div class="form-group col-md-2">
+<label for="inputCity">College</label>
+<input type="text" class="form-control" id="inputCity" name="College" required>
+</div>
+<div class="form-group col-md-2">
+<label for="inputState">Location</label>
+<input type="text" class="form-control" id="inputCity" name="Location" required>
+</div>
+<div class="form-group col-md-1">
+<label for="inputState">CGPA</label>
+<input type="text" pattern="[0-9]{2}" title="please enter correct CGPA like 78" class="form-control" id="inputCity" name="CGPA" required>
+</div>
+<div class="form-group col-md-1.5">
+<label for="inputState">Start Year</label>
+<input type="number" min=2000 max=2020 class="form-control" id="inputCity" name="Startdate" required>
+</div>
+<div class="form-group col-md-1.5">
+<label for="inputState">End Year</label>
+<input type="number" min=2000 max=2020  class="form-control" id="inputCity" name="Enddate" required>
+</div>
+</div>
+<label for=""><strong>Experience Details</strong></label>
+<div class="row">
+<div class="col">
+<input type="text" class="form-control" placeholder="Employer Name" name="Employer">
+</div>
+<div class="col">
+<input type="text" class="form-control" placeholder="Job Title" name="Jobtitle">
+</div>
+</div><br>
+<div class="form-row">
+<input type="text" min=50 class="form-control" placeholder="Description" name="JobDescription" required>
+</div>
+<br>
+<div class="form-row">
+<div class="form-group col-md-3">
+  <input type="text" class="form-control" id="inputCity" placeholder="City" name="Jobcity">
+</div>
+<div class="form-group col-md-3">
+  <input type="text" class="form-control" id="inputCity" placeholder="State" name="Jobstate">
+</div>
+  <div class="form-group col-md-3">
+  <input type="number" min=2000 max=2020  placeholder="Start Date" class="form-control" id="inputCity" name="Jobstartdate">
+  </div>
+  <div class="form-group col-md-3">
+    <input type="number" min=2000 max=2020 placeholder="End Date"  class="form-control" id="inputCity" name="Jobenddate">
+    </div>
+      </div>
+      <label for=""><strong>Add More Experience</strong></label>
+      <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Employer Name" name="Employer2">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" placeholder="Job Title" name="Jobtitle2">
+      </div>
+      </div><br>
+      <div class="form-row">
+        <input type="text" min=50 class="form-control" placeholder="Description" name="JobDescription2" required>
+      </div><br>
+        <div class="form-row">
+          <div class="form-group col-md-3">
+            <input type="text" class="form-control" id="inputCity" placeholder="City" name="Jobcity2">
+          </div>
+          <div class="form-group col-md-3">
+            <input type="text" class="form-control" id="inputCity" placeholder="State" name="Jobstate2">
+          </div>
+            <div class="form-group col-md-3">
+            <input type="number" placeholder="Start Date" min=2000 max=2020 class="form-control" id="inputCity" name="Jobstartdate2">
+            </div>
+            <div class="form-group col-md-3">
+              <input type="number" min=2000 max=2020 placeholder="End Date" class="form-control" id="inputCity" name="Jobenddate2">
+              </div>
+                </div>
+
+  <label for=""><strong>Certifications Details</strong></label>
+  <div class="form-row">
+    <div class="col-3">
+      <input type="text" class="form-control" placeholder="Certification Name" name="Certification">
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" placeholder="link" name="Certificationlink">
+      </div>
+      <div class="col-3">
+        <input type="text" class="form-control" placeholder=" Add New Certification" name="Certification2">
+      </div>
+      <div class="col-3">
+        <input type="text" class="form-control" placeholder="link" name="Certificationlink2">
+        </div>
+
+  </div><br>
+  <label for=""><strong>Technical Skills</strong></label>
+  <div class="form-row">
+  <div class="col-3">
+          <input type="text" class="form-control" placeholder="Professional skills 1" name="Skill1" required>
+          </div>
+    <div class="col-3">
+      <input type="text" class="form-control" placeholder="Professional skills 2" name="Skill2" required>
+    </div>
+    <div class="col-3">
+      <input type="text" class="form-control" placeholder="Professional skills 3" name="Skill3" required>
+     </div>
+     <div class="col-3">
+       <input type="text" class="form-control" placeholder="Professional skills 4" name="Skill4" required>
+      </div>
+    </div><br>
+    <label for=""><strong>Social Media</strong></label><br>
+      <div class="form-row">
+        <div class="col-3">
+       <input type="text" class="form-control" placeholder="Linkdin" name="Socialname1">
+      </div>
+      <div class="col-3">
+        <input type="url" class="form-control" placeholder="Linkdin link" name="Sociallink">
+       </div>
+       <div class="col-3">
+        <input type="text" class="form-control" placeholder="Github" name=Socialname2>
+        </div>
+        <div class="col-3">
+          <input type="url" class="form-control" placeholder="Github Link" name="Sociallink2">
+        </div>
+      </div><br>
+      <label for=""><strong>Soft Skills</strong></label>
+      <div class="form-row">
+        <div class="col-3">
+          <input type="text" class="form-control" placeholder="Soft skills 1" name="Softskill1" required>
+        </div>
+        <div class="col-3">
+          <input type="text" class="form-control" placeholder="Softskill 2" name="Softskill2" required>
+          </div>
+          <div class="col-3">
+            <input type="text" class="form-control" placeholder="Softskill 3" name="Softskill3" required>
+          </div>
+          <div class="col-3">
+            <input type="text" class="form-control" placeholder="Softskill 4" name="Softskill4" required>
+        </div><br><br><hr>
+        <label for=""><strong>About</strong></label>
+        <div class="col-12">
+          <input type="text" class="form-control" placeholder="About You" name="About" required>
+        </div><br><br><br>
+        <button type="submit" class="btn btn-warning btn-md btn-block">Build Resume</button>
+    </form>
+  </div>
+</div>
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+  </body>
+</html>
